@@ -1,9 +1,9 @@
 <script setup>
 /**
- * YCMS 2.0 | 基于 PHP + Node.js 的轻量内容管理系统
+ * 影云CMS 2.0 | 基于 PHP + Node.js 的轻量内容管理系统
  * Copyright © 2026 影云网络科技（石家庄）有限公司
  * 开源协议：AGPLv3 License
- * GitHub：https://github.com/sjzyingyunkeji/ycms-2.0
+ * GitHub：https://github.com/sjzyingyunkeji/yinyun-cms
  * 本程序遵循 AGPLv3 协议：公网提供服务、衍生分发时，必须同步开放对应源码；
  * 如有商用授权、定制合作需求，欢迎联系：info@sjzyingyun.cn
  */
@@ -50,7 +50,7 @@ function onWechatClick() {
     <div class="y-container py-10">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="text-center md:text-left">
-          <div class="text-base font-semibold text-[var(--y-text)] mb-1">{{ site.settings.site_name || 'ycms2.0' }}</div>
+          <div class="text-base font-semibold text-[var(--y-text)] mb-1">{{ site.settings.site_name || '影云CMS' }}</div>
           <p class="text-sm text-[var(--y-text-secondary)] max-w-md">{{ site.settings.site_description }}</p>
         </div>
 
@@ -84,8 +84,8 @@ function onWechatClick() {
 
       <div class="mt-8 pt-6 border-t border-[var(--y-border)] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--y-text-muted)]">
         <div>
-          © {{ new Date().getFullYear() }} {{ site.settings.owner_name || site.settings.site_name || 'ycms2.0' }} · Powered by
-          <span class="text-[var(--y-text-secondary)] font-medium">ycms2.0</span>
+          © {{ new Date().getFullYear() }} {{ site.settings.owner_name || site.settings.site_name || '影云CMS' }} · Powered by
+          <span class="text-[var(--y-text-secondary)] font-medium">影云CMS</span>
         </div>
         <a v-if="site.settings.site_icp" href="https://beian.miit.gov.cn" target="_blank" rel="noopener" class="hover:text-[var(--y-primary)] transition-colors duration-200">
           {{ site.settings.site_icp }}

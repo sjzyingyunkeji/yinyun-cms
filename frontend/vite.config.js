@@ -1,8 +1,8 @@
 /**
- * YCMS 2.0 | 基于 PHP + Node.js 的轻量内容管理系统
+ * 影云CMS 2.0 | 基于 PHP + Node.js 的轻量内容管理系统
  * Copyright © 2026 影云网络科技（石家庄）有限公司
  * 开源协议：AGPLv3 License
- * GitHub：https://github.com/sjzyingyunkeji/ycms-2.0
+ * GitHub：https://github.com/sjzyingyunkeji/yinyun-cms
  * 本程序遵循 AGPLv3 协议：公网提供服务、衍生分发时，必须同步开放对应源码；
  * 如有商用授权、定制合作需求，欢迎联系：info@sjzyingyun.cn
  */
@@ -46,11 +46,11 @@ function resolveTheme(mode) {
 
 // 发行版本（条件编译）：oss = 开源产物，pro = 商业产物
 // 构建时通过常量替换，未命中分支会被 Rollup 静态消除，产物中不留 Pro 代码
-const EDITION = (process.env.YCMS_EDITION || 'oss').toLowerCase() === 'pro' ? 'pro' : 'oss'
+const EDITION = (process.env.YINYUN_EDITION || 'oss').toLowerCase() === 'pro' ? 'pro' : 'oss'
 
 // 后台皮肤：星空仓库（只含 star 主题）用星空后台，主仓库用通用扁平 UI。
 // 皮肤差异只体现在 CSS token，后台组件源码全仓共用一份。
-const ADMIN_SKIN = (process.env.YCMS_ADMIN_SKIN || (THEME_SOURCES.star && !THEME_SOURCES.site ? 'star' : 'default')) === 'star'
+const ADMIN_SKIN = (process.env.YINYUN_ADMIN_SKIN || (THEME_SOURCES.star && !THEME_SOURCES.site ? 'star' : 'default')) === 'star'
   ? 'star'
   : 'default'
 const ADMIN_SKIN_CSS = path.resolve(
@@ -92,7 +92,7 @@ function storageMiddleware(req, res, next) {
 }
 
 const storagePlugin = {
-  name: 'ycms-storage-middleware',
+  name: 'yinyun-storage-middleware',
   configureServer(server) {
     server.middlewares.use(storageMiddleware)
   },
@@ -106,7 +106,7 @@ const storagePlugin = {
  */
 function themeActivatePlugin({ srcDir, slug, outDir }) {
   return {
-    name: 'ycms-theme-activate',
+    name: 'yinyun-cms-theme-activate',
     apply: 'build',
     async closeBundle() {
       const shell = path.join(outDir, 'index.html')
@@ -161,8 +161,8 @@ export default defineConfig(({ mode, command }) => {
     base: isAdmin ? '/admin/' : isDev ? '/' : themeBase,
     plugins: [vue(), storagePlugin, ...(isAdmin ? [] : [themeActivatePlugin(theme)])],
     define: {
-      __YCMS_EDITION__: JSON.stringify(EDITION),
-      __YCMS_ADMIN_SKIN__: JSON.stringify(ADMIN_SKIN),
+      __YINYUN_EDITION__: JSON.stringify(EDITION),
+      __YINYUN_ADMIN_SKIN__: JSON.stringify(ADMIN_SKIN),
     },
     resolve: {
       alias: {

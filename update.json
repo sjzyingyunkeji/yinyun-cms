@@ -4,8 +4,9 @@
     "channel": "stable",
     "min_version": "2.0.0",
     "min_php": "8.2",
-    "published_at": "2026-11-02T00:48:36+08:00",
+    "published_at": "2026-11-02T20:14:35+08:00",
     "changelog": [
+        "品牌更名为影云CMS（YinyunCMS），仓库与发布产物包名同步更新",
         "修复了部分API接口错误的问题",
         "后台全局提示统一为 Arco Design Message 规范（顶部居中、图标加文案、3 秒自动关闭）",
         "修复了已知问题，优化了体验"
@@ -13,18 +14,18 @@
     "breaking": false,
     "changelog_url": "",
     "package": {
-        "url": "https://github.com/sjzyingyunkeji/ycms-2.0/releases/download/v2.0.2/ycms-2.0.2.zip",
+        "url": "https://github.com/sjzyingyunkeji/yinyun-cms/releases/download/v2.0.2/yinyun-cms-2.0.2.zip",
         "mirrors": [],
-        "size": 720807,
-        "sha256": "bd47a243e6b2329a80db507c914d881385096eb5045e905c8f43cf3aeec47deb",
-        "signature": "HExckuS4JgOFoAd6Mc3gNU8QeYgs+eHofLICWoYpSeeJVSbENBwIAvr5fnYKeWUMzNknRSe8uWiGjSSejKhwDA=="
+        "size": 720889,
+        "sha256": "523704ae34d4b8265599ae54d117176625e93efdde937d596fa5f00e19ac6f53",
+        "signature": "D5kVM7zL0OvHy6ifqZMwpKQfiW6k9Sd30nnqIhSK2kj+AuZbLzpZ3EA/wB0z/J9vmK8apcbksOAB5t39o5W8DQ=="
     },
     "themes": {
         "default": {
             "latest": "2.0.2",
-            "package": "ycms-theme-default-2.0.2.zip",
-            "size": 440604,
-            "sha256": "9c89a79a5df77d309170e895d99016e5ae0d73cdd6f42a5433e63cb85eb32842",
+            "package": "yinyun-cms-theme-default-2.0.2.zip",
+            "size": 440621,
+            "sha256": "54db62c8080c76915cd167fad5d94b0b8ae4ea478a954dfacc90f5d375025750",
             "requires": {
                 "core": ">=2.0.2"
             }
