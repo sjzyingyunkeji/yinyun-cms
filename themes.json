@@ -1,24 +1,24 @@
 {
-    "generated_at": "2026-11-02T12:14:19.579Z",
-    "core_version": "2.0.2",
+    "generated_at": "2026-11-03T13:57:28.314Z",
+    "core_version": "2.0.3",
     "repository": "sjzyingyunkeji/yinyun-cms",
     "flavor": "default",
     "themes": {
         "default": {
             "slug": "default",
             "name": "默认主题",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "author": "影云网络科技（石家庄）有限公司",
             "description": "影云CMS 2.0 内置主题（扁平商务风，Arco Design Vue + 胶囊导航）",
             "license": "AGPL-3.0",
             "requires": {
-                "core": ">=2.0.2"
+                "core": ">=2.0.3"
             },
             "preview": "preview.jpg",
-            "package": "yinyun-cms-theme-default-2.0.2.zip",
-            "size": 440621,
-            "sha256": "54db62c8080c76915cd167fad5d94b0b8ae4ea478a954dfacc90f5d375025750",
-            "url": "https://github.com/sjzyingyunkeji/yinyun-cms/releases/download/v2.0.2/yinyun-cms-theme-default-2.0.2.zip"
+            "package": "yinyun-cms-theme-default-2.0.3.zip",
+            "size": 440909,
+            "sha256": "f414e3544c405e4444bba749db85d3f7b90a1c455db8c3b1f3a0d3b812456d03",
+            "url": "https://github.com/sjzyingyunkeji/yinyun-cms/releases/download/v2.0.3/yinyun-cms-theme-default-2.0.3.zip"
         }
     }
 }

@@ -1,32 +1,31 @@
 {
-    "latest": "2.0.2",
+    "latest": "2.0.3",
     "flavor": "default",
     "channel": "stable",
     "min_version": "2.0.0",
     "min_php": "8.2",
-    "published_at": "2026-11-02T20:14:35+08:00",
+    "published_at": "2026-11-03T21:57:35+08:00",
     "changelog": [
-        "修复了部分API接口错误的问题",
-        "后台全局提示统一为 Arco Design Message 规范（顶部居中、图标加文案、3 秒自动关闭）",
-        "修复了已知问题，优化了体验"
+        "新增自定义页脚功能，支持 HTML 内容",
+        "修复了已知问题"
     ],
     "breaking": false,
     "changelog_url": "",
     "package": {
-        "url": "https://github.com/sjzyingyunkeji/yinyun-cms/releases/download/v2.0.2/yinyun-cms-2.0.2.zip",
+        "url": "https://github.com/sjzyingyunkeji/yinyun-cms/releases/download/v2.0.3/yinyun-cms-2.0.3.zip",
         "mirrors": [],
-        "size": 720889,
-        "sha256": "523704ae34d4b8265599ae54d117176625e93efdde937d596fa5f00e19ac6f53",
-        "signature": "D5kVM7zL0OvHy6ifqZMwpKQfiW6k9Sd30nnqIhSK2kj+AuZbLzpZ3EA/wB0z/J9vmK8apcbksOAB5t39o5W8DQ=="
+        "size": 721684,
+        "sha256": "f689ce2116c71eed7c7d09c3f52d600f46f4c0807f8c58786dbeb6d1c72676fe",
+        "signature": "XHdPDivY1AfoHBRYXRGGHKdwR4keDLnxUT2HV05a9xe41ILOBXGzI5oKvPp2XPoQunSL2rzLn3x7J8PqsVyeAA=="
     },
     "themes": {
         "default": {
-            "latest": "2.0.2",
-            "package": "yinyun-cms-theme-default-2.0.2.zip",
-            "size": 440621,
-            "sha256": "54db62c8080c76915cd167fad5d94b0b8ae4ea478a954dfacc90f5d375025750",
+            "latest": "2.0.3",
+            "package": "yinyun-cms-theme-default-2.0.3.zip",
+            "size": 440909,
+            "sha256": "f414e3544c405e4444bba749db85d3f7b90a1c455db8c3b1f3a0d3b812456d03",
             "requires": {
-                "core": ">=2.0.2"
+                "core": ">=2.0.3"
             }
         }
     }

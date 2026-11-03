@@ -83,7 +83,9 @@ function onWechatClick() {
       </div>
 
       <div class="mt-8 pt-6 border-t border-[var(--y-border)] flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--y-text-muted)]">
-        <div>
+        <!-- 自定义页脚信息（站点设置，支持 HTML） -->
+        <div v-if="site.settings.footer_html" class="footer-custom" v-html="site.settings.footer_html" />
+        <div v-else>
           © {{ new Date().getFullYear() }} {{ site.settings.owner_name || site.settings.site_name || '影云CMS' }} · Powered by
           <span class="text-[var(--y-text-secondary)] font-medium">影云CMS</span>
         </div>
@@ -114,3 +116,14 @@ function onWechatClick() {
     </BaseModal>
   </footer>
 </template>
+
+<style scoped>
+/* 自定义页脚（支持 HTML）：统一链接观感 */
+.footer-custom :deep(a) {
+  color: var(--y-primary);
+  text-decoration: none;
+}
+.footer-custom :deep(a:hover) {
+  text-decoration: underline;
+}
+</style>
